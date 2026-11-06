@@ -1,24 +1,91 @@
+# Rovy Tanui | Data Science & Machine Learning
 
-## Table of Contents
+Welcome to my data science portfolio—a growing collection of projects documenting my work, experiments, and learning.
 
-- [Why This Repo?](#why-this-repo)
+I explore how data analysis, machine learning, and computer vision can address practical problems. My interests include industrial image analysis, video analytics, and cybersecurity, alongside broader work in prediction, natural language processing, and visualization.
+
+This repository brings together independent projects and work adapted from tutorials and other learning resources. It reflects both my practical experience and my continuing development. Project documentation provides technical context; source acknowledgments and descriptions of my individual contributions are an ongoing documentation priority.
+
+## Contents
+
+- [Featured Projects](#featured-projects)
+- [Skills in Practice](#skills-in-practice)
+- [My Learning Journey](#my-learning-journey)
 - [Categories](#categories)
 - [Learning Path](#learning-path)
 - [All Projects](#all-projects)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
+- [Connect with Me](#connect-with-me)
 - [License](#license)
 
-## Why This Repo?
+## Featured Projects
 
-This repository is designed for **anyone getting started with data science** -- students, career switchers, and self-learners. Each project is a standalone Jupyter notebook that you can clone and run immediately.
+### 1. Weld Seam Classification for Robotics Manufacturing
 
-You will learn:
-- **Data Cleaning and Preprocessing** -- preparing real-world messy data
-- **Exploratory Data Analysis** -- visualizations and statistical insights
-- **Machine Learning** -- classification, regression, and anomaly detection
-- **Deep Learning** -- CNNs, transfer learning, and NLP models
-- **Computer Vision** -- detection, recognition, and pose estimation
+[Explore the project](Robotics/Robotics%20and%20Computer%20Integrated%20Manufacturing)
+
+**Problem:** Classify weld seam images as a step toward exploring computer vision in manufacturing.
+
+**Approach:** MobileNetV2 transfer learning for four seam categories, with data augmentation, confusion-matrix evaluation, and OpenCV-based seam width analysis.
+
+**Documented result:** The project README reports up to **98.75% validation accuracy** after 21 epochs on a dataset of 2,000 images. This is a validation result, rather than evidence of performance in a production inspection system.
+
+**Learning focus:** Transfer learning, image preprocessing, per-class evaluation, and the relationship between image classification and physical measurements.
+
+**Tools:** Python, TensorFlow/Keras, TensorFlow Hub, OpenCV, scikit-learn.
+
+### 2. Vehicle Counting from Video
+
+[Explore the project](Computer%20Vision/Vehicle%20Counting%20from%20Video)
+
+**Problem:** Count vehicles crossing a fixed line in a traffic sequence.
+
+**Approach:** OpenCV background subtraction, morphological cleanup, and a per-lane counting rule that re-arms when a lane empties.
+
+**Documented result:** The prototype counts **8 of 8 vehicles** in a reproducible synthetic clip. Evaluation on real traffic footage remains a next step.
+
+**Learning focus:** Motion segmentation, avoiding duplicate counts, and understanding how texture and scene assumptions affect a vision pipeline.
+
+**Tools:** Python, OpenCV, NumPy, Matplotlib.
+
+### 3. Network Intrusion Detection System
+
+[Explore the project](Anomaly%20Detection/Network%20Intrusion%20Detection%20System)
+
+**Problem:** Classify network connections as normal traffic or attack categories.
+
+**Approach:** Compare classifiers including Decision Tree, Random Forest, boosting methods, and XGBoost on the KDD Cup 1999 benchmark.
+
+**Documented result:** The project README reports **99.76% accuracy for Random Forest**. This describes the project's benchmark evaluation; performance on contemporary network traffic would require separate testing.
+
+**Learning focus:** Comparing models, interpreting confusion matrices, and assessing classification performance beyond a single accuracy score.
+
+**Tools:** Python, pandas, NumPy, scikit-learn, XGBoost, Matplotlib, Seaborn.
+
+## Skills in Practice
+
+| Area | Examples in this portfolio |
+|---|---|
+| Data preparation and exploration | Cleaning datasets, examining distributions, and visualizing patterns |
+| Machine learning | Classification, regression, model comparison, and hyperparameter tuning |
+| Computer vision | Transfer learning, motion detection, and image processing |
+| Model evaluation | Precision, recall, F1, confusion matrices, and forecasting baselines |
+| Communication | Notebooks, project documentation, visualizations, and discussion of limitations |
+
+## My Learning Journey
+
+This collection spans foundational exercises and more involved applied projects. The learning path below offers one way to navigate that range.
+
+Through this portfolio, I am developing how I:
+
+- Translate a practical question into an analysis or modelling task.
+- Explore and prepare data before choosing a model.
+- Compare approaches and explain their trade-offs.
+- Interpret results in the context of the dataset and evaluation setup.
+- Document experiments so others can understand and reproduce them.
+
+My next development goals are to make project attribution and individual contributions clearer, strengthen evaluation on unseen data, and add more visual demonstrations of the featured work.
 
 ## Categories
 
@@ -228,7 +295,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 | NLP | `pip install nltk` |
 | Object Detection | `pip install ultralytics` |
 
-Each project has its own `requirements.txt` for exact dependencies:
+Check the selected project’s README and `requirements.txt` for its dependencies and setup instructions:
 
 ```bash
 cd "Project Folder Name"
@@ -241,7 +308,8 @@ jupyter notebook
 ```bash
 
 # Pick a project and run it
-cd "Iris Flower Classification"
+git clone https://github.com/311rovy/Data-Science-Projects.git
+cd "Data-Science-Projects/Classification/Iris Flower Classification"
 pip install -r requirements.txt
 jupyter notebook
 ```
@@ -256,6 +324,10 @@ Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md)
 - Host large datasets externally (>10 MB)
 - Do not commit model binaries
 
+## Connect with Me
+
+Find me on [GitHub (@311rovy)](https://github.com/311rovy) to explore my other work or discuss a project through its repository issues.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE) -- use it freely for learning, teaching, or building.
@@ -265,3 +337,4 @@ This project is licensed under the [MIT License](LICENSE) -- use it freely for l
 <p align="center">
   If this repo helped you, consider giving it a star -- it helps others find it too.
 </p>
+
